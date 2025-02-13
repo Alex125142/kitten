@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: "Brush Script MT", cursive;
+            background-color: pink;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: red;
+            align-items: center;
+        }
+        .buttons {
+            margin-top: 20px;
+            align-items: center;
+        }
+        button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #yes {
+            background-color: green;
+            color: white;
+        }
+        #no {
+            background-color: red;
+            color: white;
+            position: absolute;
+        }
+        .hamster{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            position: absolute;
+            top: 100px;  /* Move down */
+            left: 200px; /* Move right */
+        }
+        .pooh{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            position: absolute;
+            top: 100px;  /* Move down */
+            right: 200px; /* Move right */
+        }
+        .hamp{
+
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Will you be my Valentine? ❤️</h1>
+    <div class="hamster">
+        <img src="https://i.pinimg.com/736x/ec/f4/64/ecf464ef13d817120638df55cfc1aa13.jpg" alt="Hamster Flower" width="350">
+    </div>
+    <div class="pooh">
+        <img src="https://media.tenor.com/z4fd-pPilJMAAAAM/winnie-the-pooh-hearts.gif" alt="pooh" width="350">
+    </div>
+    <div class="hamp">
+        <img src="https://media.tenor.com/yKjcNbCzNUoAAAAM/yessir-4t.gif" alt="ter" width="350">
+    </div>
+    <div class="buttons">
+        <button id="yes" onclick="window.location.href='yousaidYes.html'">Yes</button>
+        <button id="no" onmouseover="moveButton()">No</button>
+    </div>
+
+    <script>
+
+
+        function moveButton() {
+            let button = document.getElementById("no");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 100);
+            button.style.left = x + "px";
+            button.style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
